@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    top: -80px;
+}
+
+.arrow-svg:hover {
+    fill: black;
+}
+
+#services-videos:hover {
+    
+}
+
+.min-h-hero {
+    @apply min-h-[calc(100vh-80px)];
+}
