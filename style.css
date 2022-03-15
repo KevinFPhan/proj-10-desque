@@ -20,3 +20,11 @@
 .min-h-hero {
     @apply min-h-[calc(100vh-80px)];
 }
+
+.hero-font1 {
+    font-size: 7vw ;
+}
+
+.hero-font2 {
+    font-size: 2vw;
+}

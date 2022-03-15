@@ -497,12 +497,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 10;
 }
 
-.mt-40 {
-  margin-top: 10rem;
+.mt-1 {
+  margin-top: 0.25rem;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
+.mt-40 {
+  margin-top: 10rem;
 }
 
 .mb-10 {
@@ -525,8 +525,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 70%;
 }
 
-.h-\[550px\] {
-  height: 550px;
+.h-\[450px\] {
+  height: 450px;
+}
+
+.h-\[1000px\] {
+  height: 1000px;
+}
+
+.h-\[1200px\] {
+  height: 1200px;
 }
 
 .w-full {
@@ -557,8 +565,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: space-between;
 }
 
+.gap-28 {
+  gap: 7rem;
+}
+
 .bg-transparent {
   background-color: transparent;
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .object-cover {
@@ -566,31 +583,17 @@ Ensure the default browser behavior of the `hidden` attribute.
      object-fit: cover;
 }
 
-.px-20 {
-  padding-left: 5rem;
-  padding-right: 5rem;
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .pt-3 {
   padding-top: 0.75rem;
 }
 
-.pl-20 {
-  padding-left: 5rem;
-}
-
 .text-center {
   text-align: center;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .text-white {
@@ -623,9 +626,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   min-height: calc(100vh - 80px);
 }
 
-@media (min-width: 1280px) {
-  .xl\:text-9xl {
-    font-size: 8rem;
-    line-height: 1;
+.hero-font1 {
+  font-size: 7vw ;
+}
+
+.hero-font2 {
+  font-size: 2vw;
+}
+
+@media (min-width: 1024px) {
+  .lg\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
