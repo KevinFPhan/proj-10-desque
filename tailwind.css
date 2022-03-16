@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com
+! tailwindcss v3.0.15 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -16,7 +16,7 @@
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: #e5e7eb;
+  border-color: currentColor;
   /* 2 */
 }
 
@@ -468,6 +468,40 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .absolute {
   position: absolute;
 }
@@ -485,6 +519,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 0px;
 }
 
+.-top-32 {
+  top: -8rem;
+}
+
 .z-20 {
   z-index: 20;
 }
@@ -497,12 +535,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 10;
 }
 
-.mt-1 {
-  margin-top: 0.25rem;
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.mt-40 {
-  margin-top: 10rem;
+.mr-8 {
+  margin-right: 2rem;
 }
 
 .mb-10 {
@@ -513,8 +552,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: flex;
 }
 
-.h-20 {
-  height: 5rem;
+.hidden {
+  display: none;
+}
+
+.h-32 {
+  height: 8rem;
 }
 
 .h-full {
@@ -525,12 +568,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 70%;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
 .h-\[450px\] {
   height: 450px;
 }
 
-.h-\[1000px\] {
-  height: 1000px;
+.h-\[1500px\] {
+  height: 1500px;
 }
 
 .h-\[1200px\] {
@@ -549,6 +596,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 33.333333%;
 }
 
+.max-w-\[1500px\] {
+  max-width: 1500px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -565,17 +620,39 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: space-between;
 }
 
-.gap-28 {
-  gap: 7rem;
+.gap-20 {
+  gap: 5rem;
 }
 
-.bg-transparent {
-  background-color: transparent;
+.rounded {
+  border-radius: 0.25rem;
 }
 
-.bg-black {
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.bg-primary {
   --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(22 178 195 / var(--tw-bg-opacity));
+}
+
+.bg-dark-bg {
+  --tw-bg-opacity: 1;
+  background-color: rgb(32 33 36 / var(--tw-bg-opacity));
+}
+
+.bg-secondary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(133 24 163 / var(--tw-bg-opacity));
+}
+
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
 .object-cover {
@@ -583,9 +660,29 @@ Ensure the default browser behavior of the `hidden` attribute.
      object-fit: cover;
 }
 
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+.px-20 {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.py-\[10px\] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.px-\[11px\] {
+  padding-left: 11px;
+  padding-right: 11px;
 }
 
 .pt-3 {
@@ -612,7 +709,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
-  top: -80px;
+  top: -128px;
 }
 
 .arrow-svg:hover {
@@ -622,21 +719,48 @@ Ensure the default browser behavior of the `hidden` attribute.
 #services-videos:hover {
 }
 
+.h-hero {
+  height: calc(100vh + 128px);
+}
+
 .min-h-hero {
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 128px);
 }
 
 .hero-font1 {
-  font-size: 7vw ;
+  font-size: 5vw ;
 }
 
 .hero-font2 {
   font-size: 2vw;
 }
 
+#DesqueLogo {
+  width: 90px;
+  height: 100%;
+  /* display: block; */
+  /* overflow: hidden; */
+  /* margin: 0 auto; */
+}
+
+.nav-scrolled1 {
+  color: #202124;
+  background-color: #16b2c3;
+  transition: background 250ms ease-in;
+}
+
+.nav-scrolled2 {
+  color: #ffffff;
+  background-color: #8518a3;
+  transition: background 250ms ease-in;
+}
+
 @media (min-width: 1024px) {
-  .lg\:px-20 {
-    padding-left: 5rem;
-    padding-right: 5rem;
+  .lg\:flex {
+    display: flex;
+  }
+
+  .lg\:hidden {
+    display: none;
   }
 }

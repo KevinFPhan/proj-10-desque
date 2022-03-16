@@ -26,31 +26,37 @@
         }
     </style> -->
     <link rel="stylesheet" href="tailwind.css">
+    <script src="js/lottie.min.js"></script>
     <title>Desque</title>
 
 </head>
-<body>
+<body class="">
     <!-- Nav Bar  -->
-    <nav class="sticky w-full top-0 flex h-20 bg-transparent justify-between px-10 lg:px-20 z-20">
-        <div class="h-full flex mt-1">
-            <a class="h-full " href="https://thedesque.com/"><img class="h-[70%] w- pt-3 " src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/TheDesque_Logo1.png" alt=""></a>
-        </div>
-        <div class="flex  items-center text-white gap-28">
-            <a class="" href="">HOME</a>
-            <a class="" href="">SERVICES</a>
-            <a class="" href="">ABOUT</a>
-            <a class="" href="">CONTACT</a>
-        </div>
-        <div class="flex items-center text-white">
-            <a href=""><button>START A PROJECT</button></a>
+    <nav class="sticky w-full top-0  flex h-32 bg-transparent z-20 text-white  ">
+        <div class="max-w-[1500px] w-full justify-between px-20 mx-auto flex  ">
+            <div id="DesqueLogo" class="">
+                <!-- <a class="h-full " href="https://thedesque.com/"><img class="h-[70%] w- pt-3 " src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/TheDesque_Logo1.png" alt=""></a> -->
+            </div>
+            <div class="hidden lg:flex  items-center   gap-20">
+                <a class="" href="#">HOME</a>
+                <a class="" href="#">SERVICES</a>
+                <a class="" href="#">ABOUT</a>
+                <a class="" href="#">CONTACT</a>
+                <a href="#"><button class="px-4 py-2 rounded bg-gradient-to-r from-stone-300 to-slate-700  border-2">START A PROJECT</button></a>            
+            </div>
+            <div class="flex lg:hidden items-center mr-8">
+                <button onclick="myFunction()"  class="cursor-pointer dropbtn1 py-[10px] px-[11px]  transition-all   rounded-md shadow-inner1  "><svg width="25px" height="25px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="#919191" d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"/></svg></button>
+            </div> 
         </div>
     </nav>
 
     <!-- Hero Section  -->
-    <section class="min-h-hero w-full relative flex flex-col justify-between">
-        <video class="absolute -z-50" id="background-video" autoplay loop muted src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/Busy-People.mp4"></video>
-        <div class=" text-white  h-full w-full text-center ">
-            <div class="mt-40">
+    <section class="hero min-h-hero w-full relative  flex flex-col justify-between ">
+        <!-- <video class="absolute -z-50" id="background-video" autoplay loop muted src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/Busy-People.mp4"></video> -->
+        <div class="absolute bg-dark-bg h-hero -top-32 w-full   -z-50"></div>
+        <div></div>
+        <div class="text-white  h-full w-full text-center ">
+            <div class="">
                 <h1 class="hero-font1 ">Discover Desque</h1>
                 <h3 class="hero-font2 ">Empowering Businesses with Brand Identity to stand out</h3>
             </div>
@@ -65,7 +71,7 @@
     </section>
 
     <!-- Services Section  -->
-    <section class="w-full relative h-[450px] flex  ">
+    <!-- <section class="w-full relative h-[450px] flex  ">
         <div class="w-1/3 h-full">
             <video id="services-videos" class="w-full h-full object-cover" src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vid1.mp4"></video>
         </div>
@@ -75,10 +81,10 @@
         <div class="w-1/3 h-full">
             <video id="services-videos " class="w-full h-full object-cover" src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/Productive-Morning.mp4"></video>
         </div>
-    </section>
+    </section> -->
     
     <!-- Contact Section  -->
-    <section class="w-full h-[1000px]">
+    <section class="contact w-full  h-[1500px] bg-primary">
         <div>
             <img src="" alt="">
         </div>
@@ -94,9 +100,29 @@
     </section>
 
     <!-- About Section  -->
-    <section class="w-full h-[1200px] bg-black">
-
+    <section class="w-full h-[1200px] bg-secondary">
+        <p>qaweqwrs</p>
     </section>
 
+    <section class="w-full h-[1200px] bg-[]  ">
+        <p>qaweqwrs</p>
+    </section>
+
+    <script src="app.js"></script>
+    <script>
+        var anim;
+        var animData = {
+          container: document.getElementById('DesqueLogo'),
+          renderer: 'svg',
+          loop: true,
+          autoplay: true,
+          rendererSettings: {
+            progressiveLoad: false,
+          },
+          path: 'DesqueLogo.json'
+        };
+        anim = bodymovin.loadAnimation(animData);
+        anim.setSpeed(1);
+    </script>
 </body>
 </html>

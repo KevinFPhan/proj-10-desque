@@ -6,7 +6,7 @@
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    top: -80px;
+    top: -128px;
 }
 
 .arrow-svg:hover {
@@ -17,14 +17,38 @@
     
 }
 
+.h-hero {
+    @apply h-[calc(100vh+128px)];
+}
+
 .min-h-hero {
-    @apply min-h-[calc(100vh-80px)];
+    @apply min-h-[calc(100vh-128px)];
 }
 
 .hero-font1 {
-    font-size: 7vw ;
+    font-size: 5vw ;
 }
 
 .hero-font2 {
     font-size: 2vw;
+}
+
+#DesqueLogo {
+    width: 90px;
+    height: 100%;
+    /* display: block; */
+    /* overflow: hidden; */
+    /* margin: 0 auto; */
+}
+
+.nav-scrolled1 {
+    color: #202124;
+    background-color: #16b2c3;
+    transition: background 250ms ease-in;
+}
+
+.nav-scrolled2 {
+    color: #ffffff;
+    background-color: #8518a3;
+    transition: background 250ms ease-in;
 }
