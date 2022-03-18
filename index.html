@@ -32,7 +32,7 @@
 </head>
 <body class="">
     <!-- Nav Bar  -->
-    <nav class="sticky w-full top-0  flex h-32 bg-transparent z-20 text-white  ">
+    <nav class="sticky w-full top-0  flex h-32 bg-transparent z-20 text-white transition-all duration-400 ease-in ">
         <div class="max-w-[1500px] w-full justify-between px-20 mx-auto flex  ">
             <div id="DesqueLogo" class="">
                 <!-- <a class="h-full " href="https://thedesque.com/"><img class="h-[70%] w- pt-3 " src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/TheDesque_Logo1.png" alt=""></a> -->
@@ -104,18 +104,72 @@
         <p>qaweqwrs</p>
     </section>
 
-    <section class="w-full h-[1200px] bg-[]  ">
-        <p>qaweqwrs</p>
+    <section id="carousel" class="w-full h-[900px] flex flex-col justify-center items-center ">
+        <div class="slider w-[80%] h-96 overflow-hidden absolute  ">
+            <div class="slider-inner absolute h-full flex justify-around w-[4000px] top-0 left-0  gap-5 ">
+                <div class="slider-img h-full bg-client1-img  bg-cover w-[500px] flex">
+                    <div class="slider-logo">
+
+                    </div>
+                </div>
+                <div class="slider-img h-full bg-client1-img bg-cover w-[500px] flex">
+                    <div class="slider-logo">
+
+                    </div>
+                </div>
+                <div class="slider-img h-full bg-client1-img bg-cover w-[500px] flex">
+                    <div class="slider-logo">
+
+                    </div>
+                </div>
+                <div class="slider-img h-full bg-client1-img bg-cover w-[500px] flex">
+                    <div class="slider-logo">
+
+                    </div>
+                </div>
+                <div class="slider-img h-full bg-client2-img bg-cover w-[500px] flex">
+                    <div class="slider-logo">
+
+                    </div>
+                </div>
+                <div class="slider-img h-full bg-client3-img bg-cover w-[500px] flex">
+                    <div class="slider-logo">
+
+                    </div>
+                </div>
+                <div class="slider-img h-full bg-client4-img bg-cover w-[500px] flex">
+                    <div class="slider-logo">
+
+                    </div>
+                </div>
+                <div class="slider-img h-full bg-client5-img bg-cover w-[500px] flex">
+                    <div class="slider-logo">
+
+                    </div>
+                </div>
+                <div class="slider-img h-full bg-client6-img bg-cover w-[500px] flex">
+                    <div class="slider-logo">
+
+                    </div>
+                </div>
+                <div class="slider-img h-full bg-client6-img bg-cover w-[500px] flex">
+                    <div class="slider-logo">
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <script src="app.js"></script>
     <script>
+        const logo1 = document.getElementById('DesqueLogo');
         var anim;
         var animData = {
           container: document.getElementById('DesqueLogo'),
           renderer: 'svg',
-          loop: true,
-          autoplay: true,
+          loop: false,
+          autoplay: false,
           rendererSettings: {
             progressiveLoad: false,
           },
@@ -123,6 +177,20 @@
         };
         anim = bodymovin.loadAnimation(animData);
         anim.setSpeed(1);
+
+        logo1.addEventListener('mouseover', () => {
+            console.log('Hello');
+            anim.setSpeed(3);
+            anim.setDirection(1);
+            anim.play();
+        });
+
+        logo1.addEventListener('mouseleave', () => {
+            console.log('Hello');
+            anim.setSpeed(3);
+            anim.setDirection(-1);
+            anim.play();
+        });
     </script>
 </body>
 </html>
