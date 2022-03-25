@@ -7,6 +7,7 @@ const innerSlider = document.querySelector('.slider-inner');
 const translate = document.querySelector('.translate');
 const heroText = document.querySelector('.hero-text');
 const hero = document.querySelector('.hero');
+const serviceBox = document.querySelector(".service-boxes")
 
 let hero_height = hero.offsetHeight;
 console.log(hero_height);
@@ -17,9 +18,15 @@ const sectionOneOptions = {
     rootMargin: "-600px 0px 0px 0px"
 };
 const serviceOptions = {
-    rootMargin: "-200px 0px 0px 0px"
+    threshold: 0,
+    rootMargin: "0px 0px -1px 0px"
 };
+const navOptions = {
+    threshold: 0,
+    rootMargin: "-600px 0px 0px 0px"
+}
 
+// Nav Bar IO
 const sectionOneObserver = new IntersectionObserver(function(entries, sectionOneObserver) {
     entries.forEach(entry => {
         // console.log(entry.target);
@@ -30,11 +37,10 @@ const sectionOneObserver = new IntersectionObserver(function(entries, sectionOne
         }
     })
 }, sectionOneOptions)
+sectionOneObserver.observe(sectionOne);
 
 const sectionTwoObserver = new IntersectionObserver(function(entries, sectionTwoObserver) {
     entries.forEach(entry => {
-        console.log(entry.target);
-        console.log("1");
         if (!entry.isIntersecting) {
             nav.classList.add("nav-scrolled2");
         } else {
@@ -42,30 +48,40 @@ const sectionTwoObserver = new IntersectionObserver(function(entries, sectionTwo
         }
     })
 }, sectionOneOptions)
+sectionTwoObserver.observe(sectionTwo);
 
+
+const navObserver = new IntersectionObserver(function(entries, navObserver) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            nav.classList.add("nav-scrolled");
+            nav.classList.add("nav-logo");
+        } else  {
+            nav.classList.remove("nav-scrolled");
+            nav.classList.remove("nav-logo");
+        }
+    })
+}, navOptions)
+navObserver.observe(sectionOne);
+
+// Services Box IO
 const serviceObserver = new IntersectionObserver(function(entries, serviceObserver) {
     entries.forEach(entry => {
-        // console.log(entry.target);
-        // console.log(entries);
-        // console.log("2");
-        // console.log(pageYOffset);
+        console.log(entry);
+        if (entry.isIntersecting) {
+            serviceBox.classList.add("service-scrolled1"); 
+        }
     })
 }, serviceOptions)
-
-window.onscroll = function() {scrollFunction()};
-
-sectionOneObserver.observe(sectionOne);
-sectionTwoObserver.observe(sectionTwo);
 serviceObserver.observe(sectionTwo);
+
+
+// window.onscroll = function() {scrollFunction()};
+
 
 // Hero Text dissapear on Scroll
 window.addEventListener('scroll', () => {
     let scroll = window.pageYOffset;
-    // console.log(scroll);
-    // translate.forEach(element => {
-    //     let speed = element.dataset.speed;
-    //     element.style.transform = `translateY(${scroll * speed}px)`;
-    // })
 
     heroText.style.opacity = - scroll / (hero_height / 3) + 1;
     heroText.style.transform = 'translateY(' + scroll * 0.7 + 'px)';
@@ -73,13 +89,13 @@ window.addEventListener('scroll', () => {
 
 
 // Function
-function scrollFunction() {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        nav.style.height = "80px";
-    } else {
-        nav.style.height = "128px"
-    }
-}
+// function scrollFunction() {
+//     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+//         nav.style.height = "80px";
+//     } else {
+//         nav.style.height = "128px"
+//     }
+// }
 
 
 

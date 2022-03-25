@@ -34,7 +34,7 @@
 }
 
 #DesqueLogo {
-    width: 100px;
+    width: 90px;
     height: 100%;
     /* display: block; */
     /* overflow: hidden; */
@@ -48,11 +48,53 @@
 .nav-scrolled1 {
     color: #202124;
     background-color: #16b2c3;
-    transition: background 250ms ease-in;
+    transition: background 200ms ease-in;
 }
 
 .nav-scrolled2 {
     color: #ffffff;
     background-color: #8518a3;
-    transition: background 250ms ease-in;
+    transition: background 200ms ease-in;
 }
+
+.service-scrolled1 {
+    transition: transform 150ms ease-in;
+    transform: translateY(100%);
+    z-index: -50;
+}
+
+.service-scrolled2 {
+    transition: transform 150ms ease-in;
+    transform: translateY(0);
+    z-index: 50;
+}
+
+.nav-scrolled {
+    height: 80px;
+    transition: all 200ms ease-in;
+}
+
+/* .nav-logo::after {
+    position: absolute;
+    top: 0;
+    content: url("https://desque.sfo3.cdn.digitaloceanspaces.com/desque/TheDesque_Logo1.png");
+    
+    
+} */
+.nav-logo::before {
+    position: absolute;
+    /* content: url("https://desque.sfo3.cdn.digitaloceanspaces.com/desque/TheDesque_Logo1.png"); */
+    content: '';
+    background: url("https://desque.sfo3.cdn.digitaloceanspaces.com/desque/Desque_Logo_Flat_White_Horz.png");
+    height: inherit;
+    width: inherit;
+}
+
+/* .nav-logo::after:hover {
+    height: 100%;
+    width: auto;
+    transform: translateX(100%);
+    transition: all 500ms ease-in;
+    transition-delay: 1s;
+
+} */
