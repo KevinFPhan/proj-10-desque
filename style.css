@@ -34,8 +34,8 @@
 }
 
 #DesqueLogo {
-    width: 90px;
-    height: 100%;
+    width: 90px !important;
+    height: 100% !important;
     /* display: block; */
     /* overflow: hidden; */
     /* margin: 0 auto; */
@@ -74,27 +74,33 @@
     transition: all 200ms ease-in;
 }
 
-/* .nav-logo::after {
-    position: absolute;
-    top: 0;
-    content: url("https://desque.sfo3.cdn.digitaloceanspaces.com/desque/TheDesque_Logo1.png");
-    
-    
-} */
-.nav-logo::before {
-    position: absolute;
-    /* content: url("https://desque.sfo3.cdn.digitaloceanspaces.com/desque/TheDesque_Logo1.png"); */
-    content: '';
-    background: url("https://desque.sfo3.cdn.digitaloceanspaces.com/desque/Desque_Logo_Flat_White_Horz.png");
-    height: inherit;
-    width: inherit;
+
+.logo2-animation {
+    animation: logo2-anim 400ms ease-in 700ms forwards; 
 }
 
-/* .nav-logo::after:hover {
-    height: 100%;
-    width: auto;
-    transform: translateX(100%);
-    transition: all 500ms ease-in;
-    transition-delay: 1s;
+.logo2-animation2 {
+    animation: logo2-anim2 500ms ease-in  forwards ; 
+}
 
-} */
+@keyframes logo2-anim {
+    0% {
+        
+        opacity: 0;
+        
+    }
+
+    100% {
+
+        opacity: 1;
+    }
+}
+
+@keyframes logo2-anim2 {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

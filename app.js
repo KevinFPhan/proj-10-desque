@@ -1,4 +1,5 @@
 const logo = document.getElementById('DesqueLogo');
+const logo2 = document.querySelector('.logo2');
 const nav = document.querySelector('nav');
 const sectionOne = document.querySelector(".hero");
 const sectionTwo = document.querySelector(".contact");
@@ -67,7 +68,7 @@ navObserver.observe(sectionOne);
 // Services Box IO
 const serviceObserver = new IntersectionObserver(function(entries, serviceObserver) {
     entries.forEach(entry => {
-        console.log(entry);
+        // console.log(entry);
         if (entry.isIntersecting) {
             serviceBox.classList.add("service-scrolled1"); 
         }
@@ -97,6 +98,16 @@ window.addEventListener('scroll', () => {
 //     }
 // }
 
+
+// Logo Animation
+logo.addEventListener('mouseover', () => {
+    logo2.classList.remove('logo2-animation2');
+    logo2.classList.add('logo2-animation');
+})
+logo.addEventListener('mouseleave', () => {
+    logo2.classList.add('logo2-animation2');
+    logo2.classList.remove('logo2-animation');
+})
 
 
 // Carousel

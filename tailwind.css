@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.0.15 | MIT License | https://tailwindcss.com
+! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -556,6 +556,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: auto;
 }
 
+.mr-5 {
+  margin-right: 1.25rem;
+}
+
 .mr-8 {
   margin-right: 2rem;
 }
@@ -592,16 +596,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 8rem;
 }
 
-.h-auto {
-  height: auto;
-}
-
 .h-full {
   height: 100%;
 }
 
 .h-\[70\%\] {
   height: 70%;
+}
+
+.h-8 {
+  height: 2rem;
 }
 
 .h-20 {
@@ -662,6 +666,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .max-w-\[1500px\] {
   max-width: 1500px;
+}
+
+.flex-none {
+  flex: none;
 }
 
 .cursor-pointer {
@@ -782,9 +790,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 5rem;
 }
 
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .py-2 {
@@ -827,6 +835,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.opacity-0 {
+  opacity: 0;
 }
 
 .transition-all {
@@ -879,8 +891,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 #DesqueLogo {
-  width: 90px;
-  height: 100%;
+  width: 90px !important;
+  height: 100% !important;
   /* display: block; */
   /* overflow: hidden; */
   /* margin: 0 auto; */
@@ -918,31 +930,55 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition: all 200ms ease-in;
 }
 
-/* .nav-logo::after {
-    position: absolute;
-    top: 0;
-    content: url("https://desque.sfo3.cdn.digitaloceanspaces.com/desque/TheDesque_Logo1.png");
-    
-    
-} */
-
-.nav-logo::before {
-  position: absolute;
-  /* content: url("https://desque.sfo3.cdn.digitaloceanspaces.com/desque/TheDesque_Logo1.png"); */
-  content: '';
-  background: url("https://desque.sfo3.cdn.digitaloceanspaces.com/desque/Desque_Logo_Flat_White_Horz.png");
-  height: inherit;
-  width: inherit;
+.logo2-animation {
+  -webkit-animation: logo2-anim 400ms ease-in 700ms forwards;
+          animation: logo2-anim 400ms ease-in 700ms forwards;
 }
 
-/* .nav-logo::after:hover {
-    height: 100%;
-    width: auto;
-    transform: translateX(100%);
-    transition: all 500ms ease-in;
-    transition-delay: 1s;
+.logo2-animation2 {
+  -webkit-animation: logo2-anim2 500ms ease-in  forwards ;
+          animation: logo2-anim2 500ms ease-in  forwards ;
+}
 
-} */
+@-webkit-keyframes logo2-anim {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes logo2-anim {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes logo2-anim2 {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes logo2-anim2 {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
 
 .hover\:bg-opacity-80:hover {
   --tw-bg-opacity: 0.8;
