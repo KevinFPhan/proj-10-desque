@@ -41,10 +41,6 @@
     /* margin: 0 auto; */
 }
 
-#DesqueLogo:hover {
-    
-}
-
 .nav-scrolled1 {
     color: #202124;
     background-color: #16b2c3;
@@ -64,9 +60,9 @@
 }
 
 .service-scrolled2 {
-    transition: transform 150ms ease-in;
+    transition: transform 100ms ease-in;
     transform: translateY(0);
-    z-index: 50;
+    z-index: 10;
 }
 
 .nav-scrolled {
@@ -81,6 +77,33 @@
 
 .logo2-animation2 {
     animation: logo2-anim2 500ms ease-in  forwards ; 
+}
+
+.logo2 {
+    /* color: #7e7e7e; */
+    opacity: 0;
+    animation: reveal 4s infinite;
+}
+
+.dlogo {
+    margin-left: -333px;
+    animation: slidein 4s infinite;
+}
+
+.upper-text > div {
+    animation: showTopText 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    transform: translate(0, 100%);
+    bottom: 0;
+}
+
+.lower-text > div {
+    animation: showBottomText 0.5s;
+    animation-delay: 1.75s;
+    animation-fill-mode: forwards;
+    top: 0;
+    transform: translate(0, -100%);
 }
 
 @keyframes logo2-anim {
@@ -102,5 +125,58 @@
     }
     100% {
         opacity: 0;
+    }
+}
+
+@keyframes slidein {
+    0% {
+        margin-left: -333px;
+    }
+    25% {
+        margin-left: -166px;
+    }
+    50% {
+        margin-left: 0px;
+    }
+    100% {
+        margin-left: 0px;
+    }
+}
+@keyframes reveal {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes showTopText {
+    0% {
+      transform: translate3d(0, 100%, 0);
+    }
+    40%, 60% {
+      transform: translate3d(0, 50%, 0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes showBottomText {
+    0% {
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0);
     }
 }

@@ -30,7 +30,8 @@
     <title>Desque</title>
 
 </head>
-<body class="">
+<body>
+
     <!-- Nav Bar  -->
     <nav class="sticky w-full top-0  flex h-32 bg-transparent z-20 text-white transition-all duration-400 ease-in ">
         <div class="max-w-[1500px] w-full justify-between px-20 mx-auto flex  ">
@@ -38,17 +39,17 @@
                 <div id="DesqueLogo" class="mr-5 flex-none">
                     <!-- <a class="h-full " href="https://thedesque.com/"><img class="h-[70%] w- pt-3 " src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/TheDesque_Logo1.png" alt=""></a> -->
                 </div>
-                <div class=" h-full w-full flex items-center opacity-0 logo2 "> 
-                    <img class=" w-auto h-8" src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/Desque_Logo_Flat_White_Horz.png" alt="">
+                <div class=" h-full w-full flex items-center opacity-100 logo2 overflow-hidden "> 
+                    <img class="dlogo w-auto h-8" src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/Desque_Logo_Flat_White_Horz.png" alt="">
                 </div>
             </div>
             
             <div class="hidden lg:flex  items-center   gap-20">
-                <a class="" href="#">HOME</a>
-                <a class="" href="#">SERVICES</a>
-                <a class="" href="#">ABOUT</a>
-                <a class="" href="#">CONTACT</a>
-                <a href="#"><button class="px-8 py-2 rounded bg-gradient-to-r from-stone-300 to-slate-700  border-2">START A PROJECT</button></a>            
+                <a class="flex-1" href="#">HOME</a>
+                <a class="flex-1" href="#">SERVICES</a>
+                <a class="flex-1" href="#">ABOUT</a>
+                <a class="flex-1" href="#">CONTACT</a>
+                <a href="#"><button class="px-8 py-2 rounded  border-2 ">START A PROJECT</button></a>            
             </div>
             <div class="flex lg:hidden items-center mr-8">
                 <button onclick="myFunction()"  class="cursor-pointer dropbtn1 py-[10px] px-[11px]  transition-all   rounded-md shadow-inner1  "><svg width="25px" height="25px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="#919191" d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"/></svg></button>
@@ -61,21 +62,26 @@
         <!-- <video class="absolute -z-50" id="background-video" autoplay loop muted src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/Busy-People.mp4"></video> -->
         <div class="absolute bg-dark-bg h-hero -top-32 w-full -z-50"></div>
         <div></div>
-        <div class="text-white relative  h-full w-full text-left ">
-            <div class="translate hero-text -mt-40  pl-40" data-speed="0.2">
-                <h1 class="text-6xl xl:text-8xl ">Discover Desque</h1>
-                <h3 class="text-3xl xl:text-4xl mt-4">Empowering Businesses with Brand Identity to stand out</h3>
+
+        <header class="text-white  h-full w-fit text-left ">
+            <div class="translate relative  hero-text -mt-40 h-40  ml-40 w-full  " data-speed="0.2">
+                <div class="upper-text  absolute h-full overflow-hidden w-full -top-1/2  ">
+                    <div class="absolute">
+                        <h1 class="text-5xl xl:text-7xl text-[#7c7c7c] ">Discover</h1>
+                        <h1 class="mt-2 text-6xl xl:text-8xl  ">Desque</h1>
+                    </div>                   
+                </div>
+                <div class="ml-1 relative top-1/2 h-8  border-b-4  w-1/2 border-white"></div>
+                <div class="ml-1 lower-text relative h-full mt-8 w-full top-1/2 overflow-hidden ">
+                    <div class="h-full">
+                        <h3 class=" text-3xl xl:text-4xl ">Empowering Businesses with Brand Identity to stand out</h3>
+                    </div>
+                </div>
             </div>
-        </div>
-        <!-- <div class="z-10 flex w-full justify-center mb-10 ">
-            <button  class="w-20 h-20 "><svg class="arrow-svg transition-all" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 490 490" fill="white" style="enable-background:new 0 0 490 490;" xml:space="preserve">
-                <path d="M320.953,78.043L245,159.24l-75.953-81.197l-34.582,35.377L91.341,67.315L0,160.754l245,261.932l245-261.932l-91.341-93.439
-               l-43.124,46.105L320.953,78.043z M168.568,122.455L245,204.162l76.432-81.707l13.11,13.41L245,231.597l-89.542-95.732
-               L168.568,122.455z M399.138,111.727l48.398,49.506L245,377.764L42.464,161.233l48.398-49.506l32.458,34.701L245,276.533
-               l121.681-130.106L399.138,111.727z"/></svg></button>
-        </div> -->
+        </header>
+
         <div class="mb-32"></div>
-        <div class="service-boxes w-[80%] h-[26%] absolute right-0 bottom-0 flex z-50">
+        <main class="service-boxes w-[80%] h-[26%] absolute right-0 bottom-0 flex z-50">
             <div class="h-full mr-2 hover:bg-opacity-80 transition bg-opacity-40 w-1/3 bg-primary">
 
             </div>
@@ -85,7 +91,7 @@
             <div class="h-full mr-2 hover:bg-opacity-80 transition bg-opacity-50 w-1/3 bg-white">
                 
             </div>
-        </div>
+        </main>
     </section>
 
     <!-- Services Section  -->

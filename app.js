@@ -71,6 +71,12 @@ const serviceObserver = new IntersectionObserver(function(entries, serviceObserv
         // console.log(entry);
         if (entry.isIntersecting) {
             serviceBox.classList.add("service-scrolled1"); 
+            if (serviceBox.classList.contains('service-scrolled2')) {
+                serviceBox.classList.remove('service-scrolled2');
+            }
+        } else {
+            serviceBox.classList.remove("service-scrolled1");
+            serviceBox.classList.add('service-scrolled2');
         }
     })
 }, serviceOptions)
@@ -84,7 +90,7 @@ serviceObserver.observe(sectionTwo);
 window.addEventListener('scroll', () => {
     let scroll = window.pageYOffset;
 
-    heroText.style.opacity = - scroll / (hero_height / 3) + 1;
+    heroText.style.opacity = - scroll / (hero_height / 1.8) + 1;
     heroText.style.transform = 'translateY(' + scroll * 0.7 + 'px)';
 })
 
@@ -100,14 +106,17 @@ window.addEventListener('scroll', () => {
 
 
 // Logo Animation
-logo.addEventListener('mouseover', () => {
-    logo2.classList.remove('logo2-animation2');
-    logo2.classList.add('logo2-animation');
-})
-logo.addEventListener('mouseleave', () => {
-    logo2.classList.add('logo2-animation2');
-    logo2.classList.remove('logo2-animation');
-})
+// logo.addEventListener('mouseover', () => {
+//     if (logo2.classList.contains('logo2-animation2')) {
+//         logo2.classList.remove('logo2-animation2');
+//     } else {
+//         logo2.classList.add('logo2-animation');
+//     }
+// })
+// logo.addEventListener('mouseleave', () => {
+//     logo2.classList.add('logo2-animation2');
+//     logo2.classList.remove('logo2-animation');
+// })
 
 
 // Carousel
