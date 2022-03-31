@@ -3,17 +3,15 @@ const logo2 = document.querySelector('.logo2');
 const nav = document.querySelector('nav');
 const sectionOne = document.querySelector(".hero");
 const sectionTwo = document.querySelector(".contact");
-const slider = document.querySelector('.slider');
-const innerSlider = document.querySelector('.slider-inner');
 const translate = document.querySelector('.translate');
 const heroText = document.querySelector('.hero-text');
 const hero = document.querySelector('.hero');
 const serviceBox = document.querySelector(".service-boxes")
 
-let hero_height = hero.offsetHeight;
-console.log(hero_height);
 
-// Nav bar Intersection Observer
+
+
+// Nav bar IO Options
 
 const sectionOneOptions = {
     rootMargin: "-600px 0px 0px 0px"
@@ -83,26 +81,17 @@ const serviceObserver = new IntersectionObserver(function(entries, serviceObserv
 serviceObserver.observe(sectionTwo);
 
 
-// window.onscroll = function() {scrollFunction()};
-
-
 // Hero Text dissapear on Scroll
+
+let hero_height = hero.offsetHeight;
+
 window.addEventListener('scroll', () => {
     let scroll = window.pageYOffset;
 
     heroText.style.opacity = - scroll / (hero_height / 1.8) + 1;
     heroText.style.transform = 'translateY(' + scroll * 0.7 + 'px)';
-})
+});
 
-
-// Function
-// function scrollFunction() {
-//     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-//         nav.style.height = "80px";
-//     } else {
-//         nav.style.height = "128px"
-//     }
-// }
 
 
 // Logo Animation
@@ -119,11 +108,26 @@ window.addEventListener('scroll', () => {
 // })
 
 
+
 // Carousel
+
+let images = [...document.querySelectorAll('.img')];
+let clogos = [...document.querySelectorAll('.clogo')];
+let slider = document.querySelector('.slider');
+let innerSlider = document.querySelector('.slider-inner');
 
 let pressed = false;
 let startx;
 let x;
+
+images.forEach((img, idx) => {
+    img.style.backgroundImage = `url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/img${idx+1}.jpg')`
+})
+
+clogos.forEach((clogo, idx) => {
+    clogo.style.backgroundImage = `url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/clogo${idx+1}.png')`
+})
+
 
 slider.addEventListener('mousedown', (e) => {
     pressed = true;
@@ -146,7 +150,6 @@ window.addEventListener('mouseup', () => {
 slider.addEventListener('mousemove', (e) => {
     if(!pressed) return;
     e.preventDefault();
-    console.log(MouseEvent);
     x = e.offsetX
 
     innerSlider.style.left = `${x - startx}px`;

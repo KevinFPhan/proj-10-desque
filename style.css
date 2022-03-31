@@ -100,11 +100,31 @@
 
 .lower-text > div {
     animation: showBottomText 0.5s;
-    animation-delay: 1.75s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
     top: 0;
     transform: translate(0, -100%);
 }
+
+/* .img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #414141;
+    opacity: 10%;
+    transition: all 200ms ease-in;
+    transform: scale(1);
+    z-index: 100    ;
+}
+
+.img:hover::after {
+    transform: scale(1.2);
+    opacity: 0;
+} */
+
 
 @keyframes logo2-anim {
     0% {
