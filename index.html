@@ -30,8 +30,8 @@
     <title>Desque</title>
 
 </head>
-<body>
-
+<body class="">
+    <div class="drag-cursor"></div>
     <!-- Nav Bar  -->
     <nav class="sticky w-full top-0  flex h-32 bg-transparent z-20 text-white transition-all duration-400 ease-in ">
         <div class="max-w-[1500px] w-full justify-between px-20 mx-auto flex  ">
@@ -108,9 +108,12 @@
     </section> -->
     
     <!-- Contact Section  -->
-    <section class="contact relative w-full  h-[1500px] bg-primary">
-        <div>
-            <img src="" alt="">
+    <section class="contact relative w-full  h-[1500px] bg-dark-bg ">
+        <div class="w-full h-[50%] relative aspect-video ">
+            <!-- <img class="w-[70%] h-full absolute right-0 bg-cover bg-center  " src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/mario-gogh-VBLHICVh-lI-unsplash.jpg" alt=""> -->
+            <div class="bg-office-img  w-[70%] h-full   absolute right-0 top-0 bg-cover bg-center "></div>
+            <!-- <img class="absolute h-96" src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/object_book_1.png" alt=""> -->
+            <!-- <img class="absolute h-40" src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/object_pen_1.png" alt=""> -->
         </div>
         <div class="flex">
             <div>
@@ -121,17 +124,21 @@
                 <a href=""><button>Contact Us</button></a>
             </div>
         </div>
+        <aside class="shadow1"></aside>
     </section>
 
     <!-- About Section  -->
-    <section class=" w-full h-[1200px] bg-secondary">
+    <section class="about relative w-full h-[1200px] bg-secondary">
         <p>qaweqwrs</p>
+
+        <aside class="shadow"></aside>
     </section>
 
-    <section id="carousel" class="w-full h-[700px] bg-dark-bg  ">
+
+    <section id="carousel" class="carousel w-full h-[700px] bg-dark-bg  ">
         <div class="slider  relative left-[10%] top-[21.5%] w-[80%] h-[400px] overflow-hidden">
             <div class="slider-inner   absolute top-0 left-0 h-full w-[200%] grid grid-cols-6 lg:grid-cols-7   gap-1 pointer-events-none  ">
-                <div class="bg-img1 transition-all bg-center bg-cover bg-no-repeat w-full hover:bg-primary   h-full  flex justify-center">
+                <div class=" transition-all bg-center bg-cover bg-no-repeat w-full  hover:bg-primary   h-full  flex justify-center">
                     <div class=" h-20 w-auto"></div>
                 </div>
                 <div class="bg-img2  transition-all bg-center bg-cover bg-no-repeat  h-full w-full ">
@@ -151,7 +158,9 @@
                 </div>
             </div>
         </div>
+    
     </section>
+    
 
     <section class="h-96"></section>
 

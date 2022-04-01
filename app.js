@@ -88,7 +88,7 @@ let hero_height = hero.offsetHeight;
 window.addEventListener('scroll', () => {
     let scroll = window.pageYOffset;
 
-    heroText.style.opacity = - scroll / (hero_height / 1.8) + 1;
+    heroText.style.opacity = - scroll / (hero_height / 1.9) + 1;
     heroText.style.transform = 'translateY(' + scroll * 0.7 + 'px)';
 });
 
@@ -166,3 +166,18 @@ function checkBoundary() {
         innerSlider.style.left = `-${inner.width - outer.width}px`
     }
 }
+
+
+
+// Mouse Cursor Hover Drag
+const dcursor = document.querySelector('.drag-cursor');
+const carousel = document.querySelector('.carousel');
+
+carousel.addEventListener('mousemove', (e) => {
+    var x = e.clientX;
+    var y = e.clientY;
+    // dcursor.style.display = 'block';
+    dcursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+    // dcursor.style.left = x + 'px';
+    // dcursor.style.top = y + 'px';
+})

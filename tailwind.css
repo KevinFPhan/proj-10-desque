@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com
+! tailwindcss v3.0.15 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -547,16 +547,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 10%;
 }
 
-.top-\[25\%\] {
-  top: 25%;
+.top-\[21\.5\%\] {
+  top: 21.5%;
 }
 
 .left-0 {
   left: 0px;
-}
-
-.top-\[21\.5\%\] {
-  top: 21.5%;
 }
 
 .z-20 {
@@ -624,6 +620,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
 .h-32 {
   height: 8rem;
 }
@@ -656,36 +656,50 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 1500px;
 }
 
-.h-\[1200px\] {
-  height: 1200px;
-}
-
 .h-\[600px\] {
   height: 600px;
-}
-
-.h-\[300px\] {
-  height: 300px;
-}
-
-.h-20 {
-  height: 5rem;
 }
 
 .h-96 {
   height: 24rem;
 }
 
-.h-\[500px\] {
-  height: 500px;
+.h-\[1200px\] {
+  height: 1200px;
+}
+
+.h-\[700px\] {
+  height: 700px;
 }
 
 .h-\[400px\] {
   height: 400px;
 }
 
-.h-\[700px\] {
-  height: 700px;
+.h-20 {
+  height: 5rem;
+}
+
+.h-\[800px\] {
+  height: 800px;
+}
+
+.h-fit {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.h-auto {
+  height: auto;
+}
+
+.h-\[30\%\] {
+  height: 30%;
+}
+
+.h-\[50\%\] {
+  height: 50%;
 }
 
 .w-full {
@@ -722,10 +736,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 200%;
 }
 
-.w-\[300\%\] {
-  width: 300%;
-}
-
 .max-w-\[1500px\] {
   max-width: 1500px;
 }
@@ -744,10 +754,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .grid-cols-6 {
   grid-template-columns: repeat(6, minmax(0, 1fr));
-}
-
-.grid-rows-1 {
-  grid-template-rows: repeat(1, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -827,18 +833,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 0.5;
 }
 
-.bg-opacity-70 {
-  --tw-bg-opacity: 0.7;
-}
-
-.bg-opacity-10 {
-  --tw-bg-opacity: 0.1;
-}
-
-.bg-img1 {
-  background-image: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/img1.jpg');
-}
-
 .bg-img2 {
   background-image: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/img2.jpg');
 }
@@ -857,6 +851,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-img6 {
   background-image: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/img6.jpg');
+}
+
+.bg-office-img {
+  background-image: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/mario-gogh-VBLHICVh-lI-unsplash.jpg');
 }
 
 .bg-cover {
@@ -905,6 +903,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 0.75rem;
 }
 
+.pb-\[56\.25\%\] {
+  padding-bottom: 56.25%;
+}
+
+.pt-\[56\.25\%\] {
+  padding-top: 56.25%;
+}
+
 .text-left {
   text-align: left;
 }
@@ -936,6 +942,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .opacity-100 {
   opacity: 1;
+}
+
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .transition-all {
@@ -1256,6 +1268,50 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+.drag-cursor {
+  width: 90px;
+  height: 70px;
+  border: 3px solid white;
+  border-radius: 100%;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+  position: fixed;
+  pointer-events: none;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  transform: translate(calc(-50% + 15px), -50%);
+  display: none;
+}
+
+.drag-cursor::before {
+  content: ' DRAG';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/* .shadow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to top, #202124, transparent);
+    z-index: 10 ;
+}  */
+
+.shadow1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(to top, #8518a3, transparent);
+  z-index: 10 ;
+}
+
 .hover\:bg-primary:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(22 178 195 / var(--tw-bg-opacity));
@@ -1263,10 +1319,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .hover\:bg-opacity-80:hover {
   --tw-bg-opacity: 0.8;
-}
-
-.hover\:bg-left:hover {
-  background-position: left;
 }
 
 @media (min-width: 1024px) {
@@ -1299,3 +1351,4 @@ Ensure the default browser behavior of the `hidden` attribute.
     line-height: 2.5rem;
   }
 }
+

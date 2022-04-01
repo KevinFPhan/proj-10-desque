@@ -23,6 +23,7 @@ module.exports = {
         'clogo4' : 'https://desque.sfo3.cdn.digitaloceanspaces.com/desque/clogo4.jpg',
         'clogo5' : 'https://desque.sfo3.cdn.digitaloceanspaces.com/desque/clogo5.jpg',
         'clogo6' : 'https://desque.sfo3.cdn.digitaloceanspaces.com/desque/clogo6.jpg',
+        'office-img' : "url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/mario-gogh-VBLHICVh-lI-unsplash.jpg')",
       }
     },
   },
