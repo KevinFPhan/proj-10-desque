@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.0.15 | MIT License | https://tailwindcss.com
+! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -543,6 +543,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   bottom: 0px;
 }
 
+.left-\[25\%\] {
+  left: 25%;
+}
+
+.left-1\/4 {
+  left: 25%;
+}
+
+.top-\[15\%\] {
+  top: 15%;
+}
+
 .left-\[10\%\] {
   left: 10%;
 }
@@ -567,6 +579,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 50;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -584,8 +600,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: -10rem;
 }
 
-.ml-40 {
-  margin-left: 10rem;
+.ml-20 {
+  margin-left: 5rem;
 }
 
 .mt-2 {
@@ -608,6 +624,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 0.5rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-24 {
+  margin-top: 6rem;
+}
+
+.mt-32 {
+  margin-top: 8rem;
+}
+
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
@@ -620,20 +656,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-.aspect-video {
-  aspect-ratio: 16 / 9;
-}
-
 .h-32 {
   height: 8rem;
 }
 
 .h-full {
   height: 100%;
-}
-
-.h-\[70\%\] {
-  height: 70%;
 }
 
 .h-8 {
@@ -652,20 +680,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 450px;
 }
 
-.h-\[1500px\] {
-  height: 1500px;
+.h-auto {
+  height: auto;
 }
 
-.h-\[600px\] {
-  height: 600px;
+.h-\[70vh\] {
+  height: 70vh;
 }
 
-.h-96 {
-  height: 24rem;
+.h-\[300px\] {
+  height: 300px;
 }
 
-.h-\[1200px\] {
-  height: 1200px;
+.h-screen {
+  height: 100vh;
 }
 
 .h-\[700px\] {
@@ -680,26 +708,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 5rem;
 }
 
-.h-\[800px\] {
-  height: 800px;
+.h-\[1000px\] {
+  height: 1000px;
 }
 
-.h-fit {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+.max-h-\[900px\] {
+  max-height: 900px;
 }
 
-.h-auto {
-  height: auto;
-}
-
-.h-\[30\%\] {
-  height: 30%;
-}
-
-.h-\[50\%\] {
-  height: 50%;
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-full {
@@ -720,12 +738,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 50%;
 }
 
-.w-\[70\%\] {
-  width: 70%;
+.w-\[75\%\] {
+  width: 75%;
 }
 
 .w-1\/3 {
   width: 33.333333%;
+}
+
+.w-\[90\%\] {
+  width: 90%;
 }
 
 .w-\[80\%\] {
@@ -770,6 +792,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
 }
 
 .gap-20 {
@@ -833,6 +859,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 0.5;
 }
 
+.bg-office-img {
+  background-image: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/mario-gogh-VBLHICVh-lI-unsplash.jpg');
+}
+
+.bg-img1 {
+  background-image: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/img1.jpg');
+}
+
 .bg-img2 {
   background-image: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/img2.jpg');
 }
@@ -851,10 +885,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-img6 {
   background-image: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/img6.jpg');
-}
-
-.bg-office-img {
-  background-image: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/mario-gogh-VBLHICVh-lI-unsplash.jpg');
 }
 
 .bg-cover {
@@ -899,16 +929,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 11px;
 }
 
-.pt-3 {
-  padding-top: 0.75rem;
+.pr-20 {
+  padding-right: 5rem;
 }
 
-.pb-\[56\.25\%\] {
-  padding-bottom: 56.25%;
-}
-
-.pt-\[56\.25\%\] {
-  padding-top: 56.25%;
+.pt-52 {
+  padding-top: 13rem;
 }
 
 .text-left {
@@ -930,6 +956,25 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2.25rem;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -944,10 +989,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   opacity: 1;
 }
 
+.mix-blend-difference {
+  mix-blend-mode: difference;
+}
+
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.invert {
+  --tw-invert: invert(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .transition-all {
@@ -1285,6 +1339,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .drag-cursor::before {
+  color: white;
+  font-size: 20px;
   content: ' DRAG';
   position: absolute;
   top: 50%;
@@ -1312,9 +1368,34 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 10 ;
 }
 
-.hover\:bg-primary:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(22 178 195 / var(--tw-bg-opacity));
+.curtain {
+  /** create the "split" background **/
+  background-image: linear-gradient(to bottom, #ffffff 50%, #202124 50%);
+}
+
+.curtain::after {
+  content: "";
+  display: block;
+  min-height: 100vh;
+}
+
+.links::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  bottom: -2px;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.links:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
 }
 
 .hover\:bg-opacity-80:hover {
@@ -1322,6 +1403,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 1024px) {
+  .lg\:mt-0 {
+    margin-top: 0px;
+  }
+
   .lg\:flex {
     display: flex;
   }
@@ -1330,12 +1415,45 @@ Ensure the default browser behavior of the `hidden` attribute.
     display: none;
   }
 
+  .lg\:w-1\/4 {
+    width: 25%;
+  }
+
+  .lg\:w-\[60\%\] {
+    width: 60%;
+  }
+
   .lg\:grid-cols-7 {
     grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
+  .lg\:pl-20 {
+    padding-left: 5rem;
+  }
+
+  .lg\:pr-56 {
+    padding-right: 14rem;
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
 @media (min-width: 1280px) {
+  .xl\:ml-40 {
+    margin-left: 10rem;
+  }
+
+  .xl\:mt-20 {
+    margin-top: 5rem;
+  }
+
   .xl\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
@@ -1349,6 +1467,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .xl\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .xl\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 }
 
