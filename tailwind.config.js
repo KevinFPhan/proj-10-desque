@@ -1,11 +1,21 @@
-const { url } = require("inspector");
+// const { url } = require("inspector");
 
 module.exports = {
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          'primary': '#16b2c3',
+          'secondary': '#8518a3',
+        },
+      },
+    ],
+  },
   content: ["./index.html"],
   theme: {
     colors: {
-      'primary': '#16b2c3',
-      'secondary': '#8518a3',
+      // 'primary': '#16b2c3',
+      // 'secondary': '#8518a3',
       'dark-bg': '#202124',
       'white': '#ffffff',
     },
@@ -27,5 +37,5 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }

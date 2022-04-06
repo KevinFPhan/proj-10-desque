@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Swiper JS  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <!-- Tailwindcss  -->
     <!-- <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -58,7 +61,7 @@
 
 
     <!-- Hero Section  -->
-    <section class="hero min-h-hero w-full relative  flex flex-col justify-between ">
+    <section class="header min-h-hero w-full relative  flex flex-col justify-between ">
         <!-- <video class="absolute -z-50" id="background-video" autoplay loop muted src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/Busy-People.mp4"></video> -->
         <div class="absolute bg-dark-bg h-hero -top-32 w-full -z-50"></div>
         <div></div>
@@ -108,11 +111,11 @@
     </section> -->
     
     <!-- Contact Section  -->
-    <section class="contact relative  w-full   h-auto   bg-dark-bg overflow-hidden">
+    <section class="contact relative  w-full   h-auto   bg-dark-bg overflow-hidden text-[#000000]">
         <div class="bg-office-img  w-[75%] h-[70vh] max-h-[900px]   relative left-[25%] top-0 bg-cover bg-center z-10 "></div>   
         <div class="relative h-[300px] w-[75%] z-10 left-1/4 xl:mt-20 mt-10 flex flex-col lg:flex-row">
             <h2 class="xl:text-5xl text-4xl w-full lg:w-1/4">We've all been there...</h2>
-            <div class=" w-full lg:w-[60%] lg:text-2xl text-xl pr-20  lg:pl-20 lg:pr-56 h-full mt-4 lg:mt-0">
+            <div class=" w-full lg:w-[60%] lg:text-2xl text-xl pr-28  lg:pl-20  h-full mt-4 lg:mt-0">
                 <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, nemo. Optio quam praesentium facere. Iusto nam laboriosam voluptate optio vitae!</p>
                 <a href="#" class="w-full mt-10 flex justify-center"><button class="px-8 py-2 rounded  border-2 ">Contact Us</button></a>
             </div>
@@ -122,45 +125,67 @@
     </section>
 
     <!-- About Section  -->
-    <section class="about   w-full h-screen bg-dark-bg">
+    <!-- <section class="about   w-full h-screen bg-dark-bg text-[#000000]">
         <div class="curtain">
-            <div class="invert sticky pt-52 top-0 flex mix-blend-difference flex-col items-center min-h-screen">
-                <h2 class="text-7xl font-medium max-w-\[1500px\]">Solutions for you Unanswered Problems</h2>
-                <div class="mt-24 ">
-                    <div class="max-w-\[1500px\] h-full flex w-full justify-around">
-                        <div class="h-full w-1/3">
-                            <h3 class="text-3xl">Lorem, ipsum dolor.</h3>
-                            <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste repudiandae assumenda recusandae facere quam harum debitis in dolores. Totam, aut.</p>
-                            <a href="" class="block mt-4"><button>Learn More</button></a>
-                        </div>
+            <div class="invert sticky  top-14 flex mix-blend-difference flex-col items-center justify-center min-h-screen">
+                <h2 class="text-6xl lg:text-7xl font-medium px-20 text-center">Solutions for you Unanswered Problems</h2>
+                <div class="mt-24  h-full flex max-w-7xl   ">
+                    <div class="flex flex-col w-full items-center text-center px-10">
                         <img src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/Desque_About_Capabilities_BrandIdent-150x150.png" alt="">
+                        <h3 class="text-3xl">Lorem, ipsum dolor.</h3>
+                        <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste repudiandae assumenda recusandae facere quam harum debitis in dolores. Totam, aut.</p>
+                        <a href="" class="block mt-4"><button>Learn More</button></a>
                     </div>
-                    <div class="max-w-\[1500px\] mt-32 h-full flex w-full justify-around">
-                        <div class="h-full w-1/3">
-                            <h3 class="text-3xl">Lorem, ipsum dolor.</h3>
-                            <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste repudiandae assumenda recusandae facere quam harum debitis in dolores. Totam, aut.</p>
-                            <a href="" class="block mt-4"><button>Learn More</button></a>
-                        </div>
+                    <div class="flex flex-col w-full items-center text-center px-10">
                         <img src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/Desque_About_Capabilities_BrandIdent-150x150.png" alt="">
+                        <h3 class="text-3xl">Lorem, ipsum dolor.</h3>
+                        <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste repudiandae assumenda recusandae facere quam harum debitis in dolores. Totam, aut.</p>
+                        <a href="" class="block mt-4"><button>Learn More</button></a>
                     </div>
-                    <div class="max-w-\[1500px\] mt-32 h-full flex w-full justify-around">
-                        <div class="h-full w-1/3">
-                            <h3 class="text-3xl">Lorem, ipsum dolor.</h3>
-                            <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste repudiandae assumenda recusandae facere quam harum debitis in dolores. Totam, aut.</p>
-                            <a href="" class="block mt-4"><button>Learn More</button></a>
-                        </div>
+                    <div class="flex flex-col w-full items-center text-center px-10">
                         <img src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/Desque_About_Capabilities_BrandIdent-150x150.png" alt="">
+                        <h3 class="text-3xl">Lorem, ipsum dolor.</h3>
+                        <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste repudiandae assumenda recusandae facere quam harum debitis in dolores. Totam, aut.</p>
+                        <a href="" class="block mt-4"><button>Learn More</button></a>
                     </div>
+                    
                 </div> 
             </div>
         </div>
 
         <aside class="shadow"></aside>
     </section>
-    <aside class="after-curtain h-screen"></aside>
+    <aside class="after-curtain h-screen"></aside> -->
     
+    <!-- Slider main container -->
+    <div class="swiper mySwiper  h-[1300px] w-full bg-dark-bg flex items-center ">
+        <div class="swiper-wrapper w-full h-[900px] flex justify-center items-center">
+            <div class="swiper-slide asd  relative rounded-[44px]  border-[5px] border-primary overflow-y-visible h-full ">
+                <img class="block relative rounded-[41px] -top-[160px] h-[1051px]    w-full  object-cover object-top" src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/Desque_Website_Client_Mockup_wHead.png" alt="">
+            </div>
+            <div class="swiper-slide rounded-[45px]  border-4 border-primary h-[60%]">
+                <img class="block rounded-[41px] w-full h-full object-cover object-top" src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/Desque_Website_Client_Mockup_wHead.png" alt="">
+            </div>
+            <div class="swiper-slide rounded-[45px]  border-4 border-primary h-[60%]">
+                <img class="block rounded-[41px] w-full h-full object-cover object-top" src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/img1.jpg" alt="">
+            </div>
+            <div class="swiper-slide rounded-[45px]  border-4 border-primary h-[60%]">
+                <img class="block rounded-[41px] w-full h-full object-cover object-top" src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/img2.jpg" alt="">
+            </div>
+            <div class="swiper-slide rounded-[45px]  border-4 border-primary h-[60%]">
+                <img class="block rounded-[41px] w-full h-full object-cover object-top" src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/img3.jpg" alt="">
+            </div>
+            <div class="swiper-slide rounded-[45px]  border-4 border-primary h-[60%]">
+                <img class="block rounded-[41px] w-full h-full object-cover object-top" src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/img4.jpg" alt="">
+            </div>
+            
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
 
-    <section id="carousel" class="carousel relative w-full h-[700px] bg-dark-bg  ">
+    <!-- <section id="carousel" class="carousel relative w-full h-[700px] bg-dark-bg  ">
         <div class="slider  relative left-[10%] top-[21.5%] w-[80%] h-[400px] overflow-hidden">
             <div class="slider-inner   absolute top-0 left-0 h-full w-[200%] grid grid-cols-6 lg:grid-cols-7   gap-1 pointer-events-none  ">
                 <div class="bg-img1 transition-all bg-center bg-cover bg-no-repeat w-full    h-full  flex justify-center">
@@ -186,14 +211,41 @@
                 </div>
             </div>
         </div>
-    
-    </section>
+    </section> -->
+
+    <footer class="bg-primary h-[300px] w-full">
+
+    </footer>
     
 
     <!-- <section class="h-[1000px]  w-full bg-secondary"></section> -->
-
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="app.js"></script>
     <script>
+        // Swiper JS
+        const swiper = new Swiper('.mySwiper', {
+            // Optional parameters
+            loop: true,
+            centeredSlides: true,
+            slidesPerView: 4,
+            spaceBetween: 100,
+        
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        
+            
+
+        });
+
         // Logo Animation 
         const logo1 = document.getElementById('DesqueLogo');
         var anim;

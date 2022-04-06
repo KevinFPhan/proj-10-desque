@@ -1,11 +1,11 @@
 const logo = document.getElementById('DesqueLogo');
 const logo2 = document.querySelector('.logo2');
 const nav = document.querySelector('nav');
-const sectionOne = document.querySelector(".hero");
+const sectionOne = document.querySelector(".header");
 const sectionTwo = document.querySelector(".contact");
 const translate = document.querySelector('.translate');
 const heroText = document.querySelector('.hero-text');
-const hero = document.querySelector('.hero');
+const header = document.querySelector('.header');
 const serviceBox = document.querySelector(".service-boxes")
 
 
@@ -83,7 +83,7 @@ serviceObserver.observe(sectionTwo);
 
 // Hero Text dissapear on Scroll
 
-let hero_height = hero.offsetHeight;
+let hero_height = header.offsetHeight;
 
 window.addEventListener('scroll', () => {
     let scroll = window.pageYOffset;
@@ -181,3 +181,5 @@ carousel.addEventListener('mousemove', (e) => {
     // dcursor.style.left = x + 'px';
     // dcursor.style.top = y + 'px';
 })
+
+

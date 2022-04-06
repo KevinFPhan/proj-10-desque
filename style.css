@@ -25,6 +25,10 @@
     @apply min-h-[calc(100vh-128px)];
 }
 
+.h-screen-nav {
+    @apply h-[calc(100vh-80px)];
+}
+
 .hero-font1 {
     font-size: 5vw ;
 }
@@ -278,3 +282,30 @@
     transform: scaleX(1);
 }
 
+/* .swiper-slide-active {
+    transform: scale(1.2);
+    transition: 0.2s ease-in;
+} */
+.swiper-slide {
+    -webkit-background-clip : padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+    
+}
+
+/* .asd::after {
+    content: '';
+    background: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/Desque_Website_Client_Mockup_wHead.png') ;
+    position: absolute;
+    width: 100%;
+    height: 1051px;
+    top: -166px;
+    
+   
+} */
+
+.asd:hover::after {
+    /* transform: scale(1.1); */
+    
+
+}
