@@ -1,11 +1,11 @@
 const logo = document.getElementById('DesqueLogo');
 const logo2 = document.querySelector('.logo2');
 const nav = document.querySelector('nav');
-const sectionOne = document.querySelector(".header");
+const sectionOne = document.querySelector(".hero-sect");
 const sectionTwo = document.querySelector(".contact");
 const translate = document.querySelector('.translate');
 const heroText = document.querySelector('.hero-text');
-const header = document.querySelector('.header');
+const hero = document.querySelector('.hero-sect');
 const serviceBox = document.querySelector(".service-boxes")
 
 
@@ -14,11 +14,11 @@ const serviceBox = document.querySelector(".service-boxes")
 // Nav bar IO Options
 
 const sectionOneOptions = {
-    rootMargin: "-600px 0px 0px 0px"
+    rootMargin: "0px 0px 0px 0px"
 };
 const serviceOptions = {
     threshold: 0,
-    rootMargin: "0px 0px -1px 0px"
+    rootMargin: "0px 0px -600px 0px"
 };
 const navOptions = {
     threshold: 0,
@@ -29,14 +29,14 @@ const navOptions = {
 const sectionOneObserver = new IntersectionObserver(function(entries, sectionOneObserver) {
     entries.forEach(entry => {
         // console.log(entry.target);
-        if (!entry.isIntersecting) {
+        if (entry.isIntersecting) {
             nav.classList.add("nav-scrolled1");
         } else {
             nav.classList.remove("nav-scrolled1");
         }
     })
-}, sectionOneOptions)
-sectionOneObserver.observe(sectionOne);
+}, serviceOptions)
+sectionOneObserver.observe(sectionTwo);
 
 const sectionTwoObserver = new IntersectionObserver(function(entries, sectionTwoObserver) {
     entries.forEach(entry => {
@@ -47,7 +47,7 @@ const sectionTwoObserver = new IntersectionObserver(function(entries, sectionTwo
         }
     })
 }, sectionOneOptions)
-sectionTwoObserver.observe(sectionTwo);
+// sectionTwoObserver.observe(sectionTwo);
 
 
 const navObserver = new IntersectionObserver(function(entries, navObserver) {
@@ -83,7 +83,7 @@ serviceObserver.observe(sectionTwo);
 
 // Hero Text dissapear on Scroll
 
-let hero_height = header.offsetHeight;
+let hero_height = hero.offsetHeight;
 
 window.addEventListener('scroll', () => {
     let scroll = window.pageYOffset;
@@ -106,67 +106,6 @@ window.addEventListener('scroll', () => {
 //     logo2.classList.add('logo2-animation2');
 //     logo2.classList.remove('logo2-animation');
 // })
-
-
-
-// Carousel
-
-let images = [...document.querySelectorAll('.img')];
-let clogos = [...document.querySelectorAll('.clogo')];
-let slider = document.querySelector('.slider');
-let innerSlider = document.querySelector('.slider-inner');
-
-let pressed = false;
-let startx;
-let x;
-
-images.forEach((img, idx) => {
-    img.style.backgroundImage = `url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/img${idx+1}.jpg')`
-})
-
-clogos.forEach((clogo, idx) => {
-    clogo.style.backgroundImage = `url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/clogo${idx+1}.png')`
-})
-
-
-slider.addEventListener('mousedown', (e) => {
-    pressed = true;
-    startx = e.offsetX - innerSlider.offsetLeft;
-    slider.style.cursor = 'grabbing'
-});
-
-slider.addEventListener('mouseenter', () => {
-    slider.style.cursor = 'grab'
-});
-
-slider.addEventListener('mouseup', () => {
-    slider.style.cursor = 'grab'
-});
-
-window.addEventListener('mouseup', () => {
-    pressed = false;
-})
-
-slider.addEventListener('mousemove', (e) => {
-    if(!pressed) return;
-    e.preventDefault();
-    x = e.offsetX
-
-    innerSlider.style.left = `${x - startx}px`;
-    checkBoundary();
-})
-
-function checkBoundary() {
-    let outer = slider.getBoundingClientRect();
-    let inner = innerSlider.getBoundingClientRect();
-
-    if(parseInt(innerSlider.style.left) > 0) {
-        innerSlider.style.left = '0px';
-    } else if (inner.right < outer.right) {
-        innerSlider.style.left = `-${inner.width - outer.width}px`
-    }
-}
-
 
 
 // Mouse Cursor Hover Drag

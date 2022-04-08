@@ -2,15 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* Hero Section  *****************************************************************************/
 #background-video {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
     top: -128px;
-}
-
-.arrow-svg:hover {
-    fill: black;
 }
 
 #services-videos:hover {
@@ -37,6 +35,22 @@
     font-size: 2vw;
 }
 
+.upper-text > div {
+    animation: showTopText 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    transform: translate(0, 100%);
+    bottom: 0;
+}
+
+.lower-text > div {
+    animation: showBottomText 0.5s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    top: 0;
+    transform: translate(0, -100%);
+}
+
 #DesqueLogo {
     width: 90px !important;
     height: 100% !important;
@@ -45,6 +59,8 @@
     /* margin: 0 auto; */
 }
 
+
+/* Nav Bar  *********************************************************************************/
 .nav-scrolled1 {
     color: #202124;
     background-color: #16b2c3;
@@ -94,40 +110,42 @@
     animation: slidein 4s infinite;
 }
 
-.upper-text > div {
-    animation: showTopText 1s;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
-    transform: translate(0, 100%);
-    bottom: 0;
-}
-
-.lower-text > div {
-    animation: showBottomText 0.5s;
-    animation-delay: 1.5s;
-    animation-fill-mode: forwards;
-    top: 0;
-    transform: translate(0, -100%);
-}
-
-/* .img::after {
-    content: '';
+.links:hover::after {
     position: absolute;
     top: 0;
     left: 0;
-    bottom: 0;
-    right: 0;
-    background: #414141;
-    opacity: 10%;
-    transition: all 200ms ease-in;
-    transform: scale(1);
-    z-index: 100    ;
+    display: block;
+    transform: translateY(calc(100% + 10px));
+    transition: transform .6s cubic-bezier(.19,1,.22,1);
 }
 
-.img:hover::after {
-    transform: scale(1.2);
-    opacity: 0;
-} */
+.links::after {
+    content: '';
+    position: relative;
+    
+    transition: transform .6s cubic-bezier(.19,1,.22,1);
+}
+
+.links::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    bottom: -2px;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.links:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
 
 
 @keyframes logo2-anim {
@@ -205,6 +223,17 @@
     }
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }    
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Drag Curor  ****************************************************************/
 .drag-cursor {
     width: 90px;
     height: 70px;
@@ -251,6 +280,8 @@
     z-index: 10 ;
 }
 
+
+/* About Section *******************************************************************************/
 .curtain {
     /** create the "split" background **/
     background-image: linear-gradient(to bottom, #ffffff 50%, #202124 50%);
@@ -263,49 +294,49 @@
    
 }
 
-.links::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    border-radius: 4px;
-    bottom: -2px;
-    left: 0;
-    background-color: #ffffff;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
+
+/* Carousel Section  *****************************************************************************/
+.swiper-slide-active {
+    /* transform: scale(1.2); */
+    animation: fadeIn 0.5s ease-in-out;
+    
 }
 
-.links:hover::before {
-    transform-origin: left;
-    transform: scaleX(1);
+.swiper-slide-active .brand-details {
+    display: block;
 }
 
-/* .swiper-slide-active {
-    transform: scale(1.2);
-    transition: 0.2s ease-in;
-} */
+.swiper-slide-active img.img1 {
+    content: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/Interact.png');
+    z-index: -1;
+}
+
 .swiper-slide {
     -webkit-background-clip : padding-box;
     -moz-background-clip: padding-box;
     background-clip: padding-box;
-    
 }
 
-/* .asd::after {
+.brand-details::before,
+.brand-details::after {
     content: '';
-    background: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/Desque_Website_Client_Mockup_wHead.png') ;
+    width: 70%;
     position: absolute;
-    width: 100%;
-    height: 1051px;
-    top: -166px;
+    display: block;
+    height: 1px;
+    background: #16b2c3;
+    left: 15%;
     
-   
-} */
-
-.asd:hover::after {
-    /* transform: scale(1.1); */
     
-
 }
+
+.brand-details::before {
+    top: -10px;
+}
+
+.brand-details::after {
+    bottom: -10px;
+}
+
+
+

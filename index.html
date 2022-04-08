@@ -61,7 +61,7 @@
 
 
     <!-- Hero Section  -->
-    <section class="header min-h-hero w-full relative  flex flex-col justify-between ">
+    <section id="hero" class="hero-sect min-h-hero w-full relative  flex flex-col justify-between ">
         <!-- <video class="absolute -z-50" id="background-video" autoplay loop muted src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/Busy-People.mp4"></video> -->
         <div class="absolute bg-dark-bg h-hero -top-32 w-full -z-50"></div>
         <div></div>
@@ -91,24 +91,12 @@
             <div class="h-full mr-2 hover:bg-opacity-80 transition bg-opacity-40 w-1/3 bg-secondary">
 
             </div>
-            <div class="h-full mr-2 hover:bg-opacity-80 transition bg-opacity-50 w-1/3 bg-white">
-                
+            <div class="h-full mr-2  w-1/3 ">
+                <video id="services-videos" onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;" class="opacity-50 hover:opacity-100 transition-all w-full h-full object-cover" src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vid1.mp4"></video>
             </div>
         </main>
     </section>
 
-    <!-- Services Section  -->
-    <!-- <section class="w-full relative h-[450px] flex  ">
-        <div class="w-1/3 h-full">
-            <video id="services-videos" class="w-full h-full object-cover" src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vid1.mp4"></video>
-        </div>
-        <div class="w-1/3 h-full">
-            <video id="services-videos " class="w-full h-full object-cover" src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/Working-Space.mp4"></video>
-        </div>
-        <div class="w-1/3 h-full">
-            <video id="services-videos " class="w-full h-full object-cover" src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/Productive-Morning.mp4"></video>
-        </div>
-    </section> -->
     
     <!-- Contact Section  -->
     <section class="contact relative  w-full   h-auto   bg-dark-bg overflow-hidden text-[#000000]">
@@ -125,7 +113,7 @@
     </section>
 
     <!-- About Section  -->
-    <!-- <section class="about   w-full h-screen bg-dark-bg text-[#000000]">
+    <section class="about   w-full h-screen bg-dark-bg text-[#000000]">
         <div class="curtain">
             <div class="invert sticky  top-14 flex mix-blend-difference flex-col items-center justify-center min-h-screen">
                 <h2 class="text-6xl lg:text-7xl font-medium px-20 text-center">Solutions for you Unanswered Problems</h2>
@@ -155,35 +143,57 @@
 
         <aside class="shadow"></aside>
     </section>
-    <aside class="after-curtain h-screen"></aside> -->
+    <aside class="after-curtain h-screen"></aside>
     
     <!-- Slider main container -->
-    <div class="swiper mySwiper  h-[1300px] w-full bg-dark-bg flex items-center ">
-        <div class="swiper-wrapper w-full h-[900px] flex justify-center items-center">
-            <div class="swiper-slide asd  relative rounded-[44px]  border-[5px] border-primary overflow-y-visible h-full ">
-                <img class="block relative rounded-[41px] -top-[160px] h-[1051px]    w-full  object-cover object-top" src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/Desque_Website_Client_Mockup_wHead.png" alt="">
+    <section class="swiper mySwiper  h-[1300px] w-full bg-dark-bg flex items-center border-t-2 border-white">
+        <div class="swiper-wrapper w-full h-[900px] items-center -top-16 ">
+            <div class="swiper-slide  h-[750px] w-96 flex flex-col items-center justify-end">
+                <img class="img1 block absolute rounded-[20px] w-full h-full object-cover object-top " src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/default.png" alt="">
+                <img class="relative h-[200px]" src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/clogo1.png" alt="">
+                <div class="relative brand-details hidden text-center mb-10 text-sm w-full">
+                    <p>Brand Creation - Brand Identity - Environmental Design</p>
+                    <p class="mt-2">Web Design - Marketing & Sales Assets</p>
+                </div>
             </div>
-            <div class="swiper-slide rounded-[45px]  border-4 border-primary h-[60%]">
-                <img class="block rounded-[41px] w-full h-full object-cover object-top" src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/Desque_Website_Client_Mockup_wHead.png" alt="">
+            <div class="swiper-slide  h-[750px] w-96 flex flex-col items-center justify-end">
+                <img class="img1 block absolute rounded-[20px] w-full h-full object-cover object-top " src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/default.png" alt="">
+                <img class="relative h-[200px]" src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/clogo1.png" alt="">
+                <div class="relative brand-details hidden text-center mb-10 text-sm w-full">
+                    <p>Brand Creation - Brand Identity - Environmental Design</p>
+                    <p class="mt-2">Web Design - Marketing & Sales Assets</p>
+                </div>
             </div>
-            <div class="swiper-slide rounded-[45px]  border-4 border-primary h-[60%]">
-                <img class="block rounded-[41px] w-full h-full object-cover object-top" src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/img1.jpg" alt="">
+            <div class="swiper-slide  h-[750px] w-96 flex flex-col items-center justify-end">
+                <img class="img1 block absolute rounded-[20px] w-full h-full object-cover object-top " src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/default.png" alt="">
+                <img class="relative h-[200px]" src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/clogo1.png" alt="">
+                <div class="relative brand-details hidden text-center mb-10 text-sm w-full">
+                    <p>Brand Creation - Brand Identity - Environmental Design</p>
+                    <p class="mt-2">Web Design - Marketing & Sales Assets</p>
+                </div>
             </div>
-            <div class="swiper-slide rounded-[45px]  border-4 border-primary h-[60%]">
-                <img class="block rounded-[41px] w-full h-full object-cover object-top" src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/img2.jpg" alt="">
+            <div class="swiper-slide  h-[750px] w-96 flex flex-col items-center justify-end">
+                <img class="img1 block absolute rounded-[20px] w-full h-full object-cover object-top " src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/default.png" alt="">
+                <img class="relative h-[200px]" src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/clogo1.png" alt="">
+                <div class="relative brand-details hidden text-center mb-10 text-sm w-full">
+                    <p>Brand Creation - Brand Identity - Environmental Design</p>
+                    <p class="mt-2">Web Design - Marketing & Sales Assets</p>
+                </div>
             </div>
-            <div class="swiper-slide rounded-[45px]  border-4 border-primary h-[60%]">
-                <img class="block rounded-[41px] w-full h-full object-cover object-top" src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/img3.jpg" alt="">
-            </div>
-            <div class="swiper-slide rounded-[45px]  border-4 border-primary h-[60%]">
-                <img class="block rounded-[41px] w-full h-full object-cover object-top" src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/img4.jpg" alt="">
+            <div class="swiper-slide  h-[750px] w-96 flex flex-col items-center justify-end">
+                <img class="img1 block absolute rounded-[20px] w-full h-full object-cover object-top " src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/default.png" alt="">
+                <img class="relative h-[200px]" src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/clogo1.png" alt="">
+                <div class="relative brand-details hidden text-center mb-10 text-sm w-full">
+                    <p>Brand Creation - Brand Identity - Environmental Design</p>
+                    <p class="mt-2">Web Design - Marketing & Sales Assets</p>
+                </div>
             </div>
             
         </div>
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination top-[76%]"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-    </div>
+    </section>
 
     <!-- <section id="carousel" class="carousel relative w-full h-[700px] bg-dark-bg  ">
         <div class="slider  relative left-[10%] top-[21.5%] w-[80%] h-[400px] overflow-hidden">
@@ -226,9 +236,10 @@
         const swiper = new Swiper('.mySwiper', {
             // Optional parameters
             loop: true,
+            // loopedSlides: 4,
             centeredSlides: true,
-            slidesPerView: 4,
-            spaceBetween: 100,
+            slidesPerView: 'auto',
+            spaceBetween: 120,
         
             // If we need pagination
             pagination: {
