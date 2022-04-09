@@ -2,13 +2,13 @@ const logo = document.getElementById('DesqueLogo');
 const logo2 = document.querySelector('.logo2');
 const nav = document.querySelector('nav');
 const sectionOne = document.querySelector(".hero-sect");
-const sectionTwo = document.querySelector(".contact");
+const sectionTwo = document.querySelector(".contact-sect");
 const translate = document.querySelector('.translate');
-const heroText = document.querySelector('.hero-text');
+const heroText = document.querySelector('.hero--text');
 const hero = document.querySelector('.hero-sect');
 const serviceBox = document.querySelector(".service-boxes")
 
-
+const hamburger = document.querySelector('.hamburger');
 
 
 // Nav bar IO Options
@@ -16,9 +16,14 @@ const serviceBox = document.querySelector(".service-boxes")
 const sectionOneOptions = {
     rootMargin: "0px 0px 0px 0px"
 };
-const serviceOptions = {
+const sectOptions = {
     threshold: 0,
     rootMargin: "0px 0px -600px 0px"
+};
+
+const serviceOptions = {
+    threshold: 0,
+    rootMargin: "0px 0px -1px 0px"
 };
 const navOptions = {
     threshold: 0,
@@ -35,7 +40,7 @@ const sectionOneObserver = new IntersectionObserver(function(entries, sectionOne
             nav.classList.remove("nav-scrolled1");
         }
     })
-}, serviceOptions)
+}, sectOptions)
 sectionOneObserver.observe(sectionTwo);
 
 const sectionTwoObserver = new IntersectionObserver(function(entries, sectionTwoObserver) {
@@ -112,13 +117,19 @@ window.addEventListener('scroll', () => {
 const dcursor = document.querySelector('.drag-cursor');
 const carousel = document.querySelector('.carousel');
 
-carousel.addEventListener('mousemove', (e) => {
-    var x = e.clientX;
-    var y = e.clientY;
-    // dcursor.style.display = 'block';
-    dcursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
-    // dcursor.style.left = x + 'px';
-    // dcursor.style.top = y + 'px';
+// carousel.addEventListener('mousemove', (e) => {
+//     var x = e.clientX;
+//     var y = e.clientY;
+//     // dcursor.style.display = 'block';
+//     dcursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+//     // dcursor.style.left = x + 'px';
+//     // dcursor.style.top = y + 'px';
+// })
+
+
+/* ----------------- Open and Close Nav Bar -------------------- */
+
+hamburger.addEventListener("click", () => {
+    document.body.classList.toggle("open");
+    console.log("asd");
 })
-
-

@@ -13,9 +13,12 @@ module.exports = {
   },
   content: ["./index.html"],
   theme: {
+    screens: {
+      'laptop' : '1200px',
+    },
     colors: {
-      // 'primary': '#16b2c3',
-      // 'secondary': '#8518a3',
+      'primary': '#16b2c3',
+      'secondary': '#8518a3',
       'dark-bg': '#202124',
       'white': '#ffffff',
     },
@@ -37,5 +40,5 @@ module.exports = {
       }
     },
   },
-  plugins: [require("daisyui")],
+  // plugins: [require("daisyui")],
 }
