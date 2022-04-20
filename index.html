@@ -34,11 +34,11 @@
 
 </head>
 <body class="">
-
+    <div class="overlay"></div>
     <div class="drag-cursor"></div>
     <!-- Nav Bar  -->
-    <nav class="nav-bar   sticky w-full top-0  flex h-32 bg-primary z-20 text-white transition-all duration-400 ease-in ">
-        <div class="max-w-[1500px] w-full justify-between px-20 mx-auto flex flex-wrap items-center  ">
+    <nav class="nav-bar   sticky w-full top-0  flex h-32 bg-transparent z-50 text-white transition-all duration-400 ease-in ">
+        <div class="max-w-[1500px] w-full justify-between px-20 mx-auto flex  items-center  ">
             <div class="w-[250px] h-full flex relative">
                 <div id="DesqueLogo" class="mr-5 flex-none"></div>
                 <div class=" h-full w-fit flex items-center opacity-100 logo2 overflow-hidden "> 
@@ -46,23 +46,29 @@
                 </div>
             </div>
             
-            <div class="nav-bar--links    ">
-                <a class="relative links flex-1 laptop:mr-16" href="#">HOME</a>
-                <a class="relative links flex-1 laptop:mr-16" href="#">SERVICES</a>
-                <a class="relative links flex-1 laptop:mr-16" href="#">ABOUT</a>
-                <a class="relative links flex-1 laptop:mr-16" href="#">CONTACT</a>
+            <div class="nav-bar--links hidden xl:flex  items-center justify-center    ">
+                <a class="relative mr-16 links flex-1 " href="#">HOME</a>
+                <a class="relative mr-16 links flex-1 " href="#">SERVICES</a>
+                <a class="relative mr-16 links flex-1 " href="#">ABOUT</a>
+                <a class="relative mr-16 links flex-1 " href="#">CONTACT</a>
                 <a href="#"><button class="px-8 py-2 rounded  border-2 ">START A PROJECT</button></a>            
             </div>
-            <div class="hamburger relative flex   items-center justify-center  ">
+            <div class="hamburger relative flex xl:hidden  items-center justify-center select-none ">
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
-            <!-- <div class="nav-bar--menu--btn flex items-center lg:hidden mr-8">
-                <button onclick="myFunction()"  class="cursor-pointer dropbtn1 py-[10px] px-[11px]  transition-all   rounded-md shadow-inner1  "><svg width="25px" height="25px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="#919191" d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"/></svg></button>
-            </div>  -->
         </div>
     </nav>
 
+    <section class="hamburger-menu ">
+        <div class="flex flex-col items-center text-4xl md:text-5xl text-white select-none">
+            <a class="relative links mb-14 " href="#">HOME</a>
+            <a class="relative links mb-14 " href="#">SERVICES</a>
+            <a class="relative links mb-14 " href="#">ABOUT</a>
+            <a class="relative links mb-14 " href="#">CONTACT</a>
+            <a href="#"><button class="px-8 py-2 rounded  border-2 ">START A PROJECT</button></a>
+        </div>
+    </section>
 
     <!-- Hero Section  -->
     <section id="hero" class="hero-sect     min-h-hero w-full relative  flex flex-col justify-between ">
@@ -101,7 +107,7 @@
         </main>
     </section>
 
-    
+
     <!-- Contact Section  -->
     <section class="contact-sect    relative  w-full   h-auto   bg-dark-bg overflow-hidden text-[#000000]">
         <div class="bg-office-img    w-[75%] h-[70vh] max-h-[900px]   relative left-[25%] top-0 bg-cover bg-center z-10 "></div>   

@@ -7,7 +7,7 @@ const translate = document.querySelector('.translate');
 const heroText = document.querySelector('.hero--text');
 const hero = document.querySelector('.hero-sect');
 const serviceBox = document.querySelector(".service-boxes")
-
+const body = document.querySelector('body');
 const hamburger = document.querySelector('.hamburger');
 
 
@@ -128,8 +128,15 @@ const carousel = document.querySelector('.carousel');
 
 
 /* ----------------- Open and Close Nav Bar -------------------- */
+let navHamburger = document.querySelector(".hamburger-menu")
+
 
 hamburger.addEventListener("click", () => {
     document.body.classList.toggle("open");
-    console.log("asd");
+    navHamburger.classList.toggle("hamburger-menu-active");
+    if (navHamburger.classList.contains('.hamburger-menu-active')) {
+        body.style.overflow = "hidden";
+    } else {
+        body.style.overflow = "auto";
+    }
 })
