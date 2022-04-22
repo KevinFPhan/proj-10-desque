@@ -110,40 +110,195 @@
     animation: slidein 4s infinite;
 }
 
-/* .links:hover::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    transform: translateY(calc(100% + 10px));
-    transition: transform .6s cubic-bezier(.19,1,.22,1);
-}
+/* --------- Nav Links ---------- */
 
-.links::after {
-    content: '';
-    position: relative;
-    
-    transition: transform .6s cubic-bezier(.19,1,.22,1);
-} */
-
-.links::before {
+li::before {
     content: '';
     position: absolute;
     width: 100%;
     height: 2px;
     border-radius: 4px;
-    bottom: -2px;
+    bottom: -7px;
     left: 0;
-    background-color: #ffffff;
+    background-color: #16b2c3;
     transform-origin: right;
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
 }
 
-.links:hover::before {
+li:hover::before {
     transform-origin: left;
     transform: scaleX(1);
 }
+
+.links2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    bottom: -12px;
+    left: 0;
+    background-color: #8518a3;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.links2:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.nav-bar--links a,
+.hamburger--menu a,
+.contact-sect a {
+    display: block;
+    text-align: center;
+    /* animation-duration: 1s; */
+    /* animation-fill-mode: both; */
+    overflow: hidden;
+}
+
+.nav-bar--links li a span,
+.hamburger--menu li a span {
+    display: block;
+    transition: transform 600ms cubic-bezier(.19,1,.22,1);
+
+}
+
+.nav-bar--links a::after {
+    content: attr(data-text);
+    color: #16b2c3;
+    display: block;
+    position: absolute;
+    transition: top 600ms cubic-bezier(.19,1,.22,1);
+    top: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.hamburger--menu a::after {
+    content: attr(data-text);
+    color: #8518a3;
+    display: block;
+    position: absolute;
+    transition: top 600ms cubic-bezier(.19,1,.22,1);
+    top: 200%;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.nav-bar--links a:hover span {
+    transform: translateY(-100%);
+}
+
+.hamburger--menu a:hover span {
+    transform: translateY(-200%);
+}
+
+.nav-bar--links a:hover::after,
+.hamburger--menu a:hover::after {
+    top: 0;
+}
+
+
+/* -------- Nav Button -------- */
+
+.nav-bar--links button span,
+.contact-sect button span {
+    display: block;
+    transition: transform 600ms cubic-bezier(.19,1,.22,1);
+}
+
+.nav-bar--links a:hover button span,
+.contact-sect button:hover span  {
+    transform: translateY(-140%);
+}
+
+.nav-bar--links a button::after {
+    content: 'START A PROJECT';
+    color: #ffffff;
+    display: block;
+    position: absolute;
+    transition: top 600ms cubic-bezier(.19,1,.22,1);
+    top: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.contact-sect a button::after {
+    content: 'Contact Us';
+    color: #ffffff;
+    display: block;
+    position: absolute;
+    transition: top 600ms cubic-bezier(.19,1,.22,1);
+    top: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.nav-bar--links a button:hover::after,
+.contact-sect a button:hover::after {
+    top: 15%;
+}
+
+.nav-bar--links button,
+.contact-sect button {
+    transition: all 0.2s ease-in;
+}
+
+.nav-bar--links button:hover,
+.contact-sect button:hover {
+    background: rgb(0, 197, 219);
+    /* opacity: 0; */
+    border: #ffffff solid 2px;
+    transition: all 0.2s ease-in;
+}
+
+
+
+.hamburger--menu button span {
+    display: block;
+    transition: transform 600ms cubic-bezier(.19,1,.22,1);
+}
+
+.hamburger--menu a:hover button span {
+    transform: translateY(-200%);
+}
+
+.hamburger--menu a button::after {
+    content: 'START A PROJECT';
+    color: #ffffff;
+    display: block;
+    position: absolute;
+    transition: top 600ms cubic-bezier(.19,1,.22,1);
+    top: 120%;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.hamburger--menu a button:hover:after {
+    top: 21%;
+}
+
+.hamburger--menu button {
+    transition: all 0.2s ease-in;
+}
+
+.hamburger--menu button:hover {
+    background: #16b2c3;
+    transition: all 0.2s ease-in;
+}
+
+
+
+/* ----------- Hamburger ---------- */
 
 .hamburger {
     /* background-color: red; */
@@ -184,7 +339,7 @@ body.open .hamburger .bar:last-child {
     transition: bottom 0.2s, transform 0.3s 0.1s;
 }
 
-.hamburger-menu {
+.hamburger--menu {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -199,7 +354,7 @@ body.open .hamburger .bar:last-child {
     transition: all 0.5s cubic-bezier(.14,.65,.46,.9);
 }
 
-.hamburger-menu-active {
+.hamburger--menu-active {
     transform: translateY(0);
     /* transition: transform 0.3s ease-in; */
 }
@@ -356,7 +511,7 @@ body.open .hamburger .bar:last-child {
 /* Carousel Section  *****************************************************************************/
 .swiper-slide-active {
     /* transform: scale(1.2); */
-    animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 0.8s ease-in-out;
     
 }
 

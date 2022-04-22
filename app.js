@@ -128,15 +128,22 @@ const carousel = document.querySelector('.carousel');
 
 
 /* ----------------- Open and Close Nav Bar -------------------- */
-let navHamburger = document.querySelector(".hamburger-menu")
+let navHamburger = document.querySelector(".hamburger--menu")
 
 
 hamburger.addEventListener("click", () => {
     document.body.classList.toggle("open");
-    navHamburger.classList.toggle("hamburger-menu-active");
-    if (navHamburger.classList.contains('.hamburger-menu-active')) {
+    navHamburger.classList.toggle("hamburger--menu-active");
+    if (navHamburger.classList.contains('.hamburger--menu-active')) {
         body.style.overflow = "hidden";
     } else {
         body.style.overflow = "auto";
+    }
+})
+
+window.addEventListener("keydown", (e) => {
+    if (e.key === 'Escape') {
+        navHamburger.classList.remove("hamburger--menu-active");
+        document.body.classList.remove("open");
     }
 })
